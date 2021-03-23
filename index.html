@@ -3,243 +3,641 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코카-콜라 저니: 한국 코카-콜라</title>
-    <link rel="icon" href="images/favicon.png">
+    <meta name="viewport" content="width=device-width">
+    <title>Etihad Airways</title>
 
-    <!-- webfont -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.min.css">
+    <!--font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/ey.css">
 
-
-    <!-- css -->
+    <!--style-->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" type="text/css" href="cssmap-continents/cssmap-continents.css" media="screen" />
 
-    <!-- js -->
+
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.png">
+    
+    <!--js-->
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/jquery.cssmap.min.js"></script>
-    <script src="js/parallax.min.js"></script>
-
 </head>
 
 <body>
+
+    <!--1 header-->
     <header>
-
-        <h1 class="logo"><a href="index.html" class="pcLogo"><img src="images/logo.png" alt="코카콜라 로고"></a>
-            <a href="index.html" class="mobileLogo">
-                <img src="images/logo-mobile.png" alt="코카콜라 로고"></a></h1>
-        <nav>
-            <div class="center clearFix">
-                <div class="hamBtn"><a href="#"><i class="icon-menu"></i></a></div>
-                <div class="searchWrap">
-                    <div class="search"><input type="text"><a href="#"><i class="icon-search"></i></a></div>
-                    <div class="closeBtn"><a href="#"><i class="icon-close"></i></a></div>
-                </div>
-                <ul class="gnb">
-                    <li><a href="brand.html">브랜드</a></li>
-                    <li><a href="#"><span>코-크 </span>스토리</a></li>
-                    <li><a href="#">라이프</a></li>
-                    <li><a href="#">커뮤니티</a></li>
-                    <li><a href="#">비디오</a></li>
+        <!--    1-1 header Top   -->
+        <div class="headTop">
+            <div class="center">
+                <h1 class="mlogo"><a href="#"><img src="images/logo.svg" alt="에티하드 로고"></a></h1>
+                <ul class="topMenu">
+                    <li>
+                        <img src="images/ico/Account.svg" alt="member">
+                        <ul class="member">
+                            <li><a href="#" target="_blank">Etihad Guest</a></li>
+                            <li><a href="#">JOIN</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <img src="images/ico/globe-icon.svg" alt="global language">
+                        <ul class="global">
+                            <li><a href="#">KR</a></li>
+                            <li><a href="#">EN</a></li>
+                            <li><a href="#">AR</a></li>
+                        </ul>
+                    </li>
+                    <li class="hamBtn"><a href="#">
+                            <img src="images/ico/hamburger.svg" alt="mobile menu"></a>
+                    </li>
                 </ul>
+            </div>
+        </div>
+        <!--    1-2 header bottom    -->
+        <div class="headBottom">
+            <div class="center clearFix">
+                <h1 class="logo"><a href="#"><img src="images/logo_header.svg" alt="에티하드 로고"></a></h1>
 
-                <div class="menuWrap">
-                    <div class="menuInner clearFix">
-                        <h2 class="blind">메인메뉴</h2>
-                        <div class="mainMenu">
-                            <h3 class="title"><span>Coca-cola Korea</span></h3>
-                            <ul id="nav">
-                                <li>
-                                    <a class="subTit">회사 소개</a>
-                                    <ul class="sub">
-                                        <li><a href="#">회사소개</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="subTit">스토리</a>
-                                    <ul class="sub">
-                                        <li><a href="#">스토리</a></li>
-                                        <li><a href="brand.html">브랜드</a></li>
-                                        <li><a href="#">코-크 스토리</a></li>
-                                        <li><a href="#">라이프</a></li>
-                                        <li><a href="#">커뮤니티</a></li>
-                                        <li><a href="#">비디오</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="subTit">프레스센터</a>
-                                    <ul class="sub">
-                                        <li><a href="#">프레스센터</a></li>
-                                        <li><a href="#">보도자료</a></li>
-                                        <li><a href="#">이미지 갤러리</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a class="subTit">고객안내</a>
-                                    <ul class="sub">
-                                        <li><a href="#">고객안내</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="global">
-                            <h3 class="title"><span>Location</span></h3>
-                            <!-- CSSMap - Continents -->
-                            <div id="map-continents">
-                                <ul class="continents ">
-                                    <li class="c1"><a href="#africa">Africa</a></li>
-                                    <li class="c2"><a href="#asia">Asia</a></li>
-                                    <li class="c3"><a href="#australia">Australia</a></li>
-                                    <li class="c4"><a href="#europe">Europe</a></li>
-                                    <li class="c5"><a href="#north-america">North America</a></li>
-                                    <li class="c6"><a href="#south-america">South America</a></li>
+                <nav>
+                    <h2 class="blind">메인 메뉴</h2>
+                    <ul id="nav">
+                       <div class="navBg"></div>
+                        <li>
+                            <p class="closeBtn"><a href="#nav"><img src="images/ico/close.png" alt="닫기"></a></p>
+                        </li>
+                        <li>
+                            <a href="#">항공권 예매</a>
+                            <div class="subWrap menu1">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="navIcon"><img src="images/guide_book.png" alt="비행기 아이콘"></div>
+                                        <a href="#">항공권</a>
+                                        <ul>
+                                            <li><a href="#">항공편 예약</a></li>
+                                            <li><a href="#">단체 예약</a></li>
+                                            <li><a href="#">에티하드 게스트 마일리지</a></li>
+                                            <li><a href="#">Rail &amp; Fly 예약하기</a></li>
+                                            <li><a href="#">성인 미동반 미성년자</a></li>
+                                            <li><a href="#">특별 행사가격</a></li>
+                                            <li><a href="#">아랍에미리트 비자</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/car-rental.svg" alt="교통편 아이콘"></div>
+                                        <a href="#">교통편</a>
+                                        <ul>
+                                            <li><a href="#">공항 왕복</a></li>
+                                            <li><a href="#">에티하드 기사 서비스 예약</a></li>
+                                            <li><a href="#">에티하드 셔틀 버스 예약</a></li>
+                                        </ul>
+
+                                    </li>
                                 </ul>
                             </div>
-                            <!-- END OF THE CSSMap - Continents -->
 
-                        </div>
-                    </div>
-                </div>
+                        </li>
+                        <li>
+                            <a href="#">나의 예약</a>
+                            <div class="subWrap menu2">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/manage-your-booking.svg" alt="체크인 아이콘"></div>
+                                        <a href="#">체크인</a>
+                                        <ul>
+                                            <li><a href="#">온라인 체크인</a></li>
+                                        </ul>
+
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/check-in-area.svg" alt="체크인 아이콘"></div>
+                                        <a href="#">예약 관리</a>
+                                        <ul>
+                                            <li><a href="#">온라인에서 예약 변경하기</a></li>
+                                            <li><a href="#">항공편 상태</a></li>
+                                            <li><a href="#">특별지원</a></li>
+                                            <li><a href="#">좌석 선택</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/ancillary-seat.svg" alt="업그레이드 아이콘"></div>
+                                        <a href="#">업그레이드 및 추가 상품</a>
+                                        <ul>
+                                            <li><a href="#">항공편</a></li>
+                                            <li><a href="#">면세품 쇼핑</a></li>
+                                            <li><a href="#">추가 수하물</a></li>
+                                            <li><a href="#">좌석 선택하기</a></li>
+                                            <li><a href="#">특별 지원</a></li>
+                                            <li><a href="#">글로벌 환영 및 어시스트</a></li>
+                                            <li><a href="#">여행자 보험</a></li>
+                                            <li><a href="#">공항 왕복</a></li>
+                                            <li><a href="#">우선 액세스</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">서비스 안내</a>
+                            <div class="subWrap menu3">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/onboard.svg" alt="온보드 아이콘"></div>
+                                        <a href="#">기내 서비스</a>
+                                        <ul>
+                                            <li><a href="#">에티하드 객실 등급</a></li>
+                                            <li><a href="#">기내식</a></li>
+                                            <li><a href="#">어린이와 함께 비행</a></li>
+                                            <li><a href="#">엔터테인먼트 및 Wi-Fi</a></li>
+                                            <li><a href="#">에티하드 항공기</a></li>
+                                            <li><a href="#">좌석 선택</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/lounge.svg" alt="라운지 아이콘"></div>
+                                        <a href="#">탑승 전 확인사항</a>
+                                        <ul>
+                                            <li><a href="#">아랍에미리트 비자</a></li>
+                                            <li><a href="#">공항 정보</a></li>
+                                            <li><a href="#">수하물 허용량</a></li>
+                                            <li><a href="#">라운지</a></li>
+                                            <li><a href="#">우대 프로그램</a></li>
+                                            <li><a href="#">특별 지원</a></li>
+                                            <li><a href="#">여행자 보험</a></li>
+                                            <li><a href="#">에티하드 웰니스</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/cov-crew-mask.svg" alt="코로나 아이콘"></div>
+                                        <a href="#">코로나19 여행정보</a>
+                                        <ul>
+                                            <li><a href="#">여행 규정</a></li>
+                                            <li><a href="#">항공편 변경</a></li>
+                                            <li><a href="#">에티하드 네트워크</a></li>
+                                            <li><a href="#">에티하드 웰니스</a></li>
+                                            <li><a href="#">코로나19 웰니스 보장</a></li>
+                                            <li><a href="#">아부다비 출발/도착 항공편</a></li>
+                                            <li><a href="#">코로나19 자가 진단</a></li>
+                                            <li><a href="#">유연한 여행</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">취항지</a>
+                            <div class="subWrap menu4">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/abu-dhabi.svg" alt="아부다비 아이콘"></div>
+                                        <a href="#">아부다비</a>
+                                        <ul>
+                                            <li><a href="#">아부다비 둘러보기</a></li>
+                                            <li><a href="#">아부다비 스톱오버</a></li>
+                                            <li><a href="#">아부다비 할인</a></li>
+                                            <li><a href="#">포뮬라 1™</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/ticket-reservation.svg" alt="티켓 아이콘"></div>
+                                        <a href="#">항공편</a>
+                                        <ul>
+                                            <li><a href="#">아부다비 항공편</a></li>
+                                            <li><a href="#">항공편 특가</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#">고객센터</a>
+                            <div class="subWrap menu5">
+                                <ul class="sub">
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/contact-us.svg" alt="고객센터 아이콘"></div>
+                                        <a href="#">일반 문의</a>
+                                        <ul>
+                                            <li><a href="#">COVID-19 관련 여행 업데이트</a></li>
+                                            <li><a href="#">피드백</a></li>
+                                            <li><a href="#">모바일 앱</a></li>
+                                            <li><a href="#">CONTACT US</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/checked-baggage.svg" alt="수하물 아이콘"></div>
+                                        <a href="#">수하물 관련</a>
+                                        <ul>
+                                            <li><a href="#">지연 또는 손상 수하물</a></li>
+                                            <li><a href="#">수하물 안내</a></li>
+                                            <li><a href="#">분실물 센터</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="navIcon"><img src="images/menu/ticket-reservation.svg" alt="티켓 아이콘"></div>
+                                        <a href="#">예약 관련</a>
+                                        <ul>
+                                            <li><a href="#">내 예약 변경</a></li>
+                                            <li><a href="#">지불 방법</a></li>
+                                            <li><a href="#">어린이와 함께 여행하기</a></li>
+                                            <li><a href="#">특별 지원</a></li>
+                                            <li><a href="#">트래블 뱅크</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </nav>
+        </div>
     </header>
-    <div id="container">
-        <h2 class="blind">본문</h2>
-        <section class="visualWrap">
-            <h3 class="blind">메인배너</h3>
-            <div class="visualInner bannerWrap">
-                <ul class="mainBanner bannerUl clearFix">
-                    <li class="banner1 active"><a href="#"><img src="images/bnr_main1.jpg" alt="banner1"></a></li>
-                    <li class="banner2"><a href="#"><img src="images/bnr_main2.jpg" alt="banner2"></a></li>
-                    <li class="banner3"><a href="#"><img src="images/bnr_main3.jpg" alt="banner3"></a></li>
-                    <li class="banner4"><a href="#"><img src="images/bnr_main4.jpg" alt="banner4"></a></li>
-                    <li class="banner5"><a href="#"><img src="images/bnr_main5.jpg" alt="banner5"></a></li>
-                    <li class="banner6"><a href="#"><img src="images/bnr_main6.jpg" alt="banner6"></a></li>
-                    <li class="banner7"><a href="#"><img src="images/bnr_main7.jpg" alt="banner7"></a></li>
-                    <li class="banner8"><a href="#"><img src="images/bnr_main8.jpg" alt="banner8"></a></li>
-                    <li class="banner9"><a href="#"><img src="images/bnr_main9.jpg" alt="banner9"></a></li>
-                </ul>
+    <hr>
+    <!--container-->
 
-                <ul class="arrowWrap clearFix">
-                    <li class="prevBtn"><a href="#"><i class="icon-left"></i></a></li>
-                    <li class="nextBtn"><a href="#"><i class="icon-right"></i></a></li>
+    <section id="container">
+        <h2 class="blind">본문</h2>
+
+        <div class="visual">
+            <section class="visualWrap">
+                <h3 class="blind">메인화면</h3>
+                <ul class="visualMain bannerJs clearFix">
+                    <li class="banner1">
+                        <div class="visualText">
+                           <div class="visualTextInner">
+                            <div class="textBox">
+                                <h4 class="title">에티하드 앱으로 여행이 더 쉬워집니다</h4>
+                                <p class="text">Apple, Android, Huawei에서 사용할 수 있는 간편한 앱을 활용해 더 스마트하게 여행하세요. 휴대전화 또는 태블릿에서 항공편을 예약하거나 쉽고 빠르게 체크인할 수 있습니다. 비행 중에 마음에 드는 영화를 시청하거나 최신 시리즈물을 감상하세요. 에티하드 게스트 계정을 최대한 활용해 마일리지를 더 큰 보너스로 바꾸세요.</p>
+                            </div>
+                            <p class="more"><a href="#">Read more</a></p>
+                        </div></div>
+                    </li>
+                    <li class="banner2">
+                        <div class="visualText">
+                           <div class="visualTextInner">
+                            <div class="textBox">
+                                <h4 class="title">실제 현장에 있는 것처럼 Formula 1™을 경험하세요</h4>
+                                <p class="text">기어를 변속할 시간입니다. 아부다비 그랑프리에 참가할 수 없다면, 에티하드에서 레이스를 제공해드립니다. 야스마리나 서킷(Yas Marina Circuit)의 아이코닉한 관람석을 360도 가상 투어로 만나보세요. 또한, 내년에 있는 Formula 1TM 에티하드항공 아부다비 그랑프리 티켓 10장 중 1장을 획득하실 수 있는 기회를 놓치지 마시기 바랍니다.</p>
+                            </div>
+                            <p class="more"><a href="#">Read more</a></p>
+                            </div></div>
+                    </li>
+                    <li class="banner3">
+                        <div class="visualText">
+                           <div class="visualTextInner">
+                            <div class="textBox">
+                                <h4 class="title">어린이 및 유아와 함께 여행하기</h4>
+                                <p class="text">어린이와 함께 여행할 때는 계획과 준비가 필요하고, 에티하드가 제공하는 도움의 손길도 필요합니다! 어린이 기내식부터 만화와 E-BOX 게임까지, 어린이 승객 돌보는 일을 도와드립니다.</p>
+                            </div>
+                            <p class="more"><a href="#">Read more</a></p>
+                            </div></div>
+                    </li>
+
+
                 </ul>
-                <div class="countWrap">
+                <div class="control">
+                    <div class="arrow">
+                       <a href="#" class="leftBtn">prev</a>
+                        <a href="#" class="rightBtn">next</a>
+                    </div>
+                    <ul class="dSlide">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="flightWrap">
+                <h3 class="blind">항공편 검색</h3>
+                <ul class="tripway">
+                    <li class="on"><a href="#">왕복</a></li>
+                    <li><a href="#">편도</a></li>
+                    <li><a href="#">다구간</a></li>
+                </ul>
+                <form name="flightForm"method="get" action="#">
+                    <!--
+                    <fieldset class="tripway">
+                        <legend class="blind">여정 종류</legend>
+                        <input type="radio" id="roundtrip" name="tripway">
+                        <label for="roundtrip">왕복</label>
+                        <input type="radio" id="oneway" name="tripway">
+                        <label for="oneway">편도</label>
+                        <input type="radio" id="multiple" name="tripway">
+                        <label for="multiple">다구간</label>
+                        
+                    </fieldset>
+-->
+                    <p class="promo">
+                        <label for="promocode">프로모션 코드 <input type="text" name="promocode" id="promocode"></label>
+                    </p>
+<!--                    <fieldset>-->
+                        <div class="itinerary">
+                            <legend class="blind">여정 선택</legend>
+                            <div class="destination">
+                                <div class="dept">
+                                    <input type="text" id="departure" name="departure">
+                                    <label for="departure">출발지</label>
+                                </div>
+                                <div class="arv">
+                                    <input type="text" id="arrival" name="arrival">
+                                    <label for="arrival">도착지</label>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <input type="date" id="adate" name="adate">
+                                <label for="adate" class="blind">출발일</label>
+                                <span>~</span>
+                                <input type="date" id="ddate" name="ddate">
+                                <label for="ddate" class="blind">도착일</label>
+                            </div>
+                            <div class="pax">
+                                <p>탑승객</p>
+                                <div class="paxWrap">
+                                    <ul class="paxSelect">
+                                        <li>성인</li>
+                                        <li>소아</li>
+                                        <li>유아</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="cabin">
+                                <p>좌석 등급</p>
+                               <div class="cabinWrap">
+                                <ul class="cabinSelect">
+                                    <li><a href="#">이코노미</a></li>
+                                    <li><a href="#">비지니스</a></li>
+                                    <li><a href="#">퍼스트</a></li>
+                                    <li><a href="#">레지던스</a></li>
+                                </ul>
+                                </div>
+                                <!--
+                            <label for="class">좌석등급
+                                <select name="class" id="class">
+                                    <option value="이코노미">이코노미</option>
+                                    <option value="비지니스">비지니스</option>
+                                    <option value="퍼스트">퍼스트</option>
+                                    <option value="레지던스">레지던스</option>
+                                </select>
+                            </label>
+-->
+                            </div>
+                            <p class="search"><button>검색<i class="icon-search"></i></button></p>
+                        </div>
+<!--                    </fieldset>-->
+                </form>
+            </section>
+        </div>
+    </section>
+    <section class="contents">
+        <h3 class="blind">메인공지,가이드라인,참고사항</h3>
+        <div class="center">
+            <section class="referWrap">
+                <h4 class="blind">메인공지배너</h4>
+                <ul>
+                    <li>
+                        <div class="gbox"></div>
+                        <div class="textBox">
+                            <h5 class="title">전 세계로 가는 에티하드</h5>
+                            <p class="text">최대 60개의 여행지로 여행을 떠나세요</p>
+                        </div>
+                        <p class="more"><a href="#">Etihad Network</a></p>
+                    </li>
+                    <li>
+                        <div class="gbox"></div>
+                        <div class="textBox">
+                            <h5 class="title">코로나19 PCR 검사</h5>
+                            <p class="text">비행 전 반드시 코로나19 PCR 검사를 받아야 합니다</p>
+                        </div>
+                        <p class="more"><a href="#">Read more</a></p>
+                    </li>
+                    <li>
+                        <div class="gbox"></div>
+                        <div class="textBox">
+                            <h5 class="title">아랍에미리트 비자 발급</h5>
+                            <p class="text">아부다비 및 두바이 도착 시 비자 발급</p>
+                        </div>
+                        <p class="more"><a href="#">Read more</a></p>
+                    </li>
+                </ul>
+            </section>
+            <section class="iconCard">
+                <h4 class="title mtitle"><i class="icon-info"></i> information</h4>
+                <div class="ic">
+                    <section class="iconWrap">
+                        <h5 class="blind">가이드라인</h5>
+                        <ul>
+                            <li><a href="#">
+                                    <img src="images/guide_departure.png" alt="아부다비발 항공편">
+                                    <div class="textBox">
+                                        <h6 class="title">아부다비발 항공편</h6>
+                                        <p class="text">아랍에미리트에 계신 외국인이십니까? <br>아부다비에서 출발하는 항공편 일정을 살펴보세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <img src="images/guide_arrival.png" alt="아부다비행 항공편">
+                                    <div class="textBox">
+                                        <h6 class="title">아부다비행 항공편</h6>
+                                        <p class="text">아부다비 입국 전에 반드시 코로나19 PCR 검사를 받아야합니다.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <img src="images/guide_book.png" alt="아부다비를 경유하기">
+                                    <div class="textBox">
+                                        <h6 class="title">아부다비를 경유하기</h6>
+                                        <p class="text">아부다비를 경유하여 유럽, 아시아 및 호주 전역의 목적지로 비행하세요.</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li><a href="#">
+                                    <img src="images/guide_enquiry.png" alt="여행 규정">
+                                    <div class="textBox">
+                                        <h6 class="title">여행 규정</h6>
+                                        <p class="text">모든 항공편 탑승 전에는 의무적으로 코로나19 PCR 검사를 받아야 합니다.</p>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </section>
+                    <section class="cardWrap">
+                        <h5 class="blind">카드배너</h5>
+                        <div class="cardBanner">
+                            <ul class="bannerJs clearFix">
+                                <li class="banner1"><a href="#">
+                                        <h6 class="title">할인된 금액으로 넉넉한 레그룸 및 라운지를 이용하세요</h6>
+                                        <p class="text">이코노미 스페이스 좌석에서 엑스트라 레그룸을 최대 40% 할인된 금액으로 이용하고, 아부다비의 에티하드 라운지를 25% 할인된 금액으로 이용하세요</p>
+                                    </a>
+                                </li>
+                                <li class="banner2"><a href="#">
+                                        <h6 class="title">미래를 위한 유연한 여행 방식</h6>
+                                        <p class="text">필요한 경우 여행 계획을 자유롭게 변경할 수 있도록 지금 예약하세요.</p>
+                                    </a></li>
+                                <li class="banner3"><a href="#">
+                                        <h6 class="title">여행 관리하기</h6>
+                                        <p class="text">나중에 갈 여행을 미리 예약하고 최대 $400의 보너스 크레딧과 에티하드 게스트 마일리지 5,000 마일을 받으세요.</p>
+                                    </a></li>
+                                <li class="banner4"><a href="#">
+                                        <h6 class="title">에티하드는 승객의 웰니스를 가장 중요하게 생각합니다</h6>
+                                        <p class="text">모든 항공권에 대해 코로나19 글로벌 보험 보장이 적용됩니다.</p>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="arrow">
+                               <a href="#" class="leftBtn">prev</a>
+                                <a href="#" class="rightBtn">next</a>
+                            </div>
+                            <ul class="dSlide">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section class="priceWrap">
+        <div class="center">
+            <h3 class="title"><i class="icon-flight"></i> 서울 출발 특가 항공권</h3>
+            <p>왕복 요금, 세금 및 유류할증료 포함. 항공편 스케줄은 변동될 수 있으며, 현지 운항 상황에 따릅니다.</p>
+            <div class="dPrice">
+                <ul>
+                    <li><a href="#">
+                            <h4 class="city">두바이</h4>
+                            <p class="class">이코노미</p>
+                            <p class="price">786,700원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4 class="city">런던</h4>
+                            <p class="class">이코노미</p>
+                            <p class="price">973,700원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4 class="city">바르셀로나</h4>
+                            <p class="class">이코노미</p>
+                            <p class="price">623,200원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4 class="city">취리히</h4>
+                            <p class="class">이코노미</p>
+                            <p class="price">656,100원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4 class="city">카이로</h4>
+                            <p class="class">비지니스</p>
+                            <p class="price">4,582,400원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                    <li><a href="#">
+                            <h4 class="city">마드리드</h4>
+                            <p class="class">비지니스</p>
+                            <p class="price">2,733,400원</p>
+                            <p class="period">2021-06-20</p>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="arrow">
+                <a href="#">prev</a>
+                <a href="#">next</a>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+    <!--footer-->
+    <footer>
+        <section class="center">
+            <h2 class="blind">푸터</h2>
+            <div class="footTop">
+                <div class="policy">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 취급방침</a></li>
+                        <li><a href="#">쿠키 정책</a></li>
+                    </ul>
+                </div>
+                <div class="snsWrap clearFix">
+                    <ul>
+                        <li><a href="#"><img src="images/ico/social-linkedin-icon.svg" alt="링크드인"></a></li>
+                        <li><a href="#"><img src="images/ico/social-Instagram-icon.svg" alt="인스타그램"></a></li>
+                        <li><a href="#"><img src="images/ico/social-facebook-icon.svg" alt="페이스북"></a></li>
+                        <li><a href="#"><img src="images/ico/social-youtube-icon.svg" alt="유튜브"></a></li>
+                        <li><a href="#"><img src="images/ico/social-twitter-icon.svg" alt="트위터"></a></li>
+                    </ul>
+                </div>
+                <div class="familysite">
+                    <a href="#">Brand Sites</a>
+                    <ul class="family">
+                        <li><a href="#">에티하드항공 그룹</a></li>
+                        <li><a href="#">에티하드 게스트</a></li>
+                        <li><a href="#">에티하드 카고</a></li>
+                        <li><a href="#">에티하드 엔지니어링</a></li>
+                        <li><a href="#">에티하드 항공교육</a></li>
+                        <li><a href="#">에티하드 비즈니스 커넥트</a></li>
+                    </ul>
+                    <!--
+                    <select name="familysite" id="familysite">
+                        <option value="에티하드항공 그룹">에티하드항공 그룹</option>
+                        <option value="에티하드 게스트">에티하드 게스트</option>
+                        <option value="에티하드 카고">에티하드 카고</option>
+                        <option value="에티하드 엔지니어링">에티하드 엔지니어링</option>
+                        <option value="에티하드 항공교육">에티하드 항공교육</option>
+                        <option value="에티하드 비즈니스 커넥트">에티하드 비즈니스 커넥트 </option>
+                    </select>
+-->
+                </div>
+
+            </div>
+            <div class="footBottom">
+                <div class="footMenu">
+                    <ul>
+                        <li>
+                            <p>에티하드항공 소개</p>
+                            <ul>
+                                <li><a href="#">기업 개요</a></li>
+                                <li><a href="#">최신 소식</a></li>
+                                <li><a href="#">채용정보</a></li>
+                                <li><a href="#">에티하드 공식 후원</a></li>
+                                <li><a href="#">윤리 및 규정 준수</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <p>유용한 링크</p>
+                            <ul>
+                                <li><a href="#">여행 선택</a></li>
+                                <li><a href="#">수하물</a></li>
+                                <li><a href="#">결제 옵션</a></li>
+                                <li><a href="#">당사 모바일 앱</a></li>
+                                <li><a href="#">조달</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footLogo">
+                    <p><img src="images/logo_footer.svg" alt="푸터 로고"></p>
+                    <p><small> All rights reserved &copy; Etihad Airways.</small></p>
                 </div>
             </div>
         </section>
-        <section class="tvWrap">
-            <h3 class="title center"><span>JOURNEY™ TV</span></h3>
-            <div class="tvInner bannerWrap center">
-                <ul class="textWrap">
-                    <li class="active">
-                        <p class="tvTit">코카-콜라</p>
-                        <p class="tvText">박보검X박코크 여름 인터뷰</p>
-                        <p class="more"><a href="#">유튜브 보러가기</a></p>
-                    </li>
-                    <li>
-                        <p class="tvTit">하트 저수지</p>
-                        <p class="tvText">물 환원 프로젝트</p>
-                        <p class="more"><a href="#">유튜브 보러가기</a></p>
-                    </li>
-                    <li>
-                        <p class="tvTit">애틀랜타</p>
-                        <p class="tvText">월드 오브 코카-콜라에 가다</p>
-                        <p class="more"><a href="#">유튜브 보러가기</a></p>
-                    </li>
-                    <li>
-                        <p class="tvTit">스프라이트</p>
-                        <p class="tvText">스윙스X입짧은햇님</p>
-                        <p class="more"><a href="#">유튜브 보러가기</a></p>
-                    </li>
-                </ul>
-                <ul class="mainTv clearFix bannerUl">
-                    <li class="active">
-                        <a href="#">
-                            <img src="images/thumb_tv1.jpg" alt="박보검X박코크 여름 인터뷰">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/thumb_tv2.jpg" alt="물 환원 프로젝트">
-                        </a>
-
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/thumb_tv3.jpg" alt="월드 오브 코카-콜라에 가다">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="images/thumb_tv4.jpg" alt="스윙스X입짧은햇님">
-                        </a>
-                    </li>
-                </ul>
-                <ul class="arrowWrap clearFix">
-                    <li class="prevBtn"><a href="#"><i class="icon-left"></i></a></li>
-                    <li class="nextBtn"><a href="#"><i class="icon-right"></i></a></li>
-                    <li class="more"><a href="#"><i class="icon-plus"></i></a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="photosWrap">
-            <h3 class="title center"><span>JOURNEY™ PHOTOS</span></h3>
-            <div class="photosInner bannerWrap">
-                <ul class="thumb bannerUl clearFix">
-                    <li><a href="#"><img src="images/thumb_photos01.jpg" alt="인스타 썸네일1"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos02.jpg" alt="인스타 썸네일2"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos03.jpg" alt="인스타 썸네일3"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos04.jpg" alt="인스타 썸네일4"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos05.jpg" alt="인스타 썸네일5"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos06.jpg" alt="인스타 썸네일6"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos07.jpg" alt="인스타 썸네일7"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos08.jpg" alt="인스타 썸네일8"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos09.jpg" alt="인스타 썸네일9"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos10.jpg" alt="인스타 썸네일10"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos11.jpg" alt="인스타 썸네일11"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos12.jpg" alt="인스타 썸네일12"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos13.jpg" alt="인스타 썸네일13"></a></li>
-                    <li><a href="#"><img src="images/thumb_photos14.jpg" alt="인스타 썸네일14"></a></li>
-                </ul>
-
-                <ul class="arrowWrap clearFix">
-                    <li class="prevBtn"><a href="#"><i class="icon-left"></i></a></li>
-                    <li class="nextBtn"><a href="#"><i class="icon-right"></i></a></li>
-                </ul>
-            </div>
-        </section>
-        <section class="snsWrap center">
-            <h3 class="title"><span>COCA-COLA ON SOCIAL</span></h3>
-            <ul>
-                <li><a href="#"><img src="images/sns_facebook.svg" alt="faceboook"></a></li>
-                <li><a href="#"><img src="images/sns_instagram.svg" alt="instagram"></a></li>
-                <li><a href="#"><img src="images/sns_youtube.svg" alt="youtube"></a></li>
-                <li><a href="#"><img src="images/sns_twitter.svg" alt="twitter"></a></li>
-                <li><a href="#"><img src="images/sns_tumblr.svg" alt="tumblr"></a></li>
-            </ul>
-        </section>
-    </div>
-    <footer>
-        <ul class="fnb">
-            <li><a href="#">글로벌 코카-콜라</a></li>
-            <li><a href="#">한국 코카-콜라</a></li>
-            <li><a href="#">코카-콜라 저니</a></li>
-            <li><a href="#">프레스센터</a></li>
-            <li><a href="#">고객 안내 </a></li>
-            <li><a href="#">개인정보처리방침 </a></li>
-            <li><a href="#">법적고지</a></li>
-        </ul>
-        <p class="fLogo"><img src="images/logo-mobile.png" alt="푸터 로고"></p>
-        <p class="copyright">&copy; 2018 THE COCA-COLA COMPANY</p>
     </footer>
+    <aside class="quickWrap">
+        <ul>
+            <li><a href="#"><i class="icon-top"></i><span>TOP</span></a></li>
+            <li><a href="#"><img src="images/menu/ticket-reservation.svg" alt="항공권 예매"><span>항공권 예매</span></a></li>
+            <li><a href="#"><img src="images/menu/cov-crew-mask.svg" alt="코로나19<br>관련 공지"><span>코로나19</span></a></li>
+            <li><a href="#"><img src="images/menu/manage-your-booking.svg" alt="예약 조회"><span>예약 조회</span></a></li>
+            <li><a href="#"><img src="images/menu/ancillary-seat.svg" alt="부가서비스"><span>부가서비스</span></a></li>
+        </ul>
+    </aside>
 
-</body>
-
-</html>
+</body></html>
